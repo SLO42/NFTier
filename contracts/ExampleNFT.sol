@@ -25,7 +25,7 @@ contract ExampleNFT is ERC721URIStorage, Ownable {
     // receiver takes a type of address. This is the wallet address of the user that should receive the NFT minted using the smart contract
     // tokenURI takes a string that contains metadata about the NFT
 
-    function createNFT(address receiver, string memory tokenURI)
+    function mintNFT(address receiver, string memory tokenURI)
         public
         onlyOwner
         returns (uint256)

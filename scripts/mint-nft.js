@@ -18,8 +18,8 @@ async function mintNFT(tokenURI) {
         nonce: nonce, // nonce with the no of transactions from our account
         gas: 1000000, // fee estimate to complete the transaction
         data: nftContract.methods
-            .createNFT(METAMASK_PUBLIC_KEY, tokenURI)
-            .encodeABI(), // call the createNFT function from our ExampleNFT.sol file and pass the account that should receive the minted NFT.
+            .mintNFT(METAMASK_PUBLIC_KEY, tokenURI)
+            .encodeABI(), // call the mintNFT function from our ExampleNFT.sol file and pass the account that should receive the minted NFT.
     };
     const signPromise = alchemyWeb3.eth.accounts.signTransaction(
         tx,
